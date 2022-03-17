@@ -19,7 +19,7 @@
 }
 
 .u-section-2 .u-image-1 {
-  background-image: url("images/Screenshot12.png");
+  background-image: url("/images/Screenshot12.png");
   background-position: 50% 50%;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .u-section-2 .u-image-2 {
-  background-image: url("images/Screenshot22.png");
+  background-image: url("/images/Screenshot22.png");
   background-position: 50% 50%;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .u-section-2 .u-image-3 {
-  background-image: url("images/Screenshot42.png");
+  background-image: url("/images/Screenshot42.png");
   background-position: 50% 50%;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .u-section-2 .u-image-4 {
-  background-image: url("images/Screenshot32.png");
+  background-image: url("/images/Screenshot32.png");
   background-position: 50% 50%;
 }
 
