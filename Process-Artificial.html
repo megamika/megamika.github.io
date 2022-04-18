@@ -29,6 +29,7 @@
     
     
     
+    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -49,13 +50,15 @@
           </div>
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="/Main.html" style="padding: 10px 20px;">Main</a>
+</li><li class="u-nav-item"><a class="u-button-style u-file-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="/files/Mikael_Zakoyan_Resume-1.pdf" target="_blank" style="padding: 10px 20px;">Resume</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Main.html" style="padding: 10px 20px;">Main</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Main.html">Main</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/files/Mikael_Zakoyan_Resume-1.pdf" target="_blank">Resume</a>
 </li></ul>
               </div>
             </div>
@@ -84,11 +87,13 @@
       </div>
     </section>
     <section class="u-clearfix u-section-3" id="sec-0a25">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-text u-text-default u-text-palette-2-dark-2 u-text-1">
           <a href="https://megamika.itch.io/pugio2d" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-feature u-hover-none u-none u-text-palette-2-dark-2 u-btn-1" target="_blank">Play the game on itch.io</a>
         </h3>
+        <a href="https://megamika.itch.io/pugio2d" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-feature u-hover-none u-none u-text-palette-2-dark-2 u-btn-2" target="_blank">Check the repository</a>
       </div>
+      
       
     </section>
     <section class="u-clearfix u-grey-10 u-section-4" id="sec-7507">
@@ -98,107 +103,174 @@
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-expanded-width u-list u-list-1">
           <div class="u-repeater u-repeater-1">
-            <div class="u-container-style u-image u-list-item u-repeater-item u-image-1" data-image-width="1920" data-image-height="1080">
+            <div class="u-container-style u-file-link u-image u-list-item u-repeater-item u-image-1" data-image-width="1920" data-image-height="1080" data-href="/files/Screenshot1-33.png">
               <div class="u-container-layout u-similar-container u-container-layout-1"></div>
             </div>
-            <div class="u-container-style u-image u-list-item u-repeater-item u-image-2" data-image-width="1600" data-image-height="900">
+            <div class="u-container-style u-file-link u-image u-list-item u-repeater-item u-image-2" data-image-width="1600" data-image-height="900" data-href="/files/Screenshot3-1.png">
               <div class="u-container-layout u-similar-container u-container-layout-2"></div>
             </div>
-            <div class="u-container-style u-image u-list-item u-repeater-item u-image-3" data-image-width="1600" data-image-height="900">
+            <div class="u-container-style u-file-link u-image u-list-item u-repeater-item u-image-3" data-image-width="1600" data-image-height="900" data-href="/files/Screenshot4-2.png">
               <div class="u-container-layout u-similar-container u-container-layout-3"></div>
             </div>
-            <div class="u-container-style u-image u-list-item u-repeater-item u-image-4" data-image-width="1600" data-image-height="900">
+            <div class="u-container-style u-file-link u-image u-list-item u-repeater-item u-image-4" data-image-width="1600" data-image-height="900" data-href="/files/Screenshot2-3.png">
               <div class="u-container-layout u-similar-container u-container-layout-4"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="u-clearfix u-grey-10 u-section-6" id="carousel_c276">
-      <div class="u-clearfix u-sheet u-sheet-1"></div>
-    </section>
-    <section class="u-clearfix u-section-7" id="sec-0474">
-      <div class="u-clearfix u-sheet u-sheet-1">
+    <section class="u-clearfix u-section-6" id="sec-cf07">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h2 class="u-text u-text-default u-text-1"> Level scripting</h2>
-        <img class="u-image u-image-default u-image-1" src="/images/Pastedimage20220415143336.png" alt="" data-image-width="540" data-image-height="369">
-        <p class="u-text u-text-2">
-          <span style="font-weight: 700;">Problem</span>
-          <br>The game is in the metroidvania genre so that required us to have some areas that could only be acessed after a certain condition has been met or a certain location was reached.
-        </p>
-        <p class="u-text u-text-3">
-          <span style="font-weight: 700;">Solution</span>
-          <br>There is a system in the game which allows a level designer to pair an event in the game to be connected to another event without the need to write an extra script.<br>
-          <br>- Opening a door after an enemy has been killed<br>- Opening a latch after the lever has been pulled
-        </p>
       </div>
     </section>
-    <section class="u-clearfix u-grey-10 u-section-8" id="carousel_d43c">
-      <div class="u-clearfix u-sheet u-sheet-1"></div>
+    <section class="u-clearfix u-section-7" id="sec-a09a">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-valign-top u-container-layout-1">
+                  <img class="u-file-link u-image u-image-default u-image-1" src="/images/Pastedimage20220415143336-38.png" alt="" data-image-width="540" data-image-height="369" data-href="/files/Pastedimage20220415143336.png">
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-valign-middle u-container-layout-2">
+                  <p class="u-text u-text-1">
+                    <span style="font-weight: 700;">Problem</span>
+                    <br> The game is in the metroidvania genre, so that required us to have some areas that could only be accessed after a certain condition has been met, or a certain location was reached.<br>
+                    <br>
+                    <span style="font-weight: 700;">Solution</span>
+                    <br> There is a system in the game that allows a level designer to pair an event in the game to be connected to another event without writing an extra script. Here are some examples<br>
+                    <br>- Opening a door after an enemy has been killed<br>- Opening a latch after the lever has been pulled<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="u-clearfix u-section-9" id="carousel_46b2">
+    <section class="u-clearfix u-section-8" id="sec-19d0">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-default u-text-1"> Ability unlocks</h2>
         <p class="u-text u-text-2">
-          <span style="font-weight: 700;"></span>The game features several upgrades to give the player a feeling of progression and to change up the gameplay.
-        </p>
-        <h2 class="u-text u-text-default u-text-3">Sword</h2>
-        <h2 class="u-text u-text-default u-text-4"> Air dashes</h2>
-        <img class="u-image u-image-default u-image-1" src="/images/Pastedimage20220415144455.png" alt="" data-image-width="305" data-image-height="285">
-        <img class="u-image u-image-default u-image-2" src="/images/a6fb142e26b3b3bb89d4f05b5ed1842d.gif" alt="" data-image-width="1000" data-image-height="560">
-        <p class="u-text u-text-5">
-          <span style="font-weight: 700;"></span>First iteam you recieve in the game is just your sword. The goal was to have as little of a tutorial in the game as possible so the way the player would be taught  how to play is by restricting his abilities untill he has proven that he has understood how to use his other abilities so the sword will only be granted to the player after he has done some basic platforming.
-        </p>
-        <p class="u-text u-text-6">
-          <span style="font-weight: 700;"></span>This ability allows you to dash up to the areas you could not reach before. It was added as one of the ways we restrict some areas from being visited before the player has unlocked this ability. There are a few things that could have been improved about it however.<br>
-          <br>- It's a pretty linear way to interact with the game, you only get to be thrown into one direction thus limiting your options.<br>
-          <br>- There was no clear way to predict how far the thrusters would throw the player so a lot of the time they just overshoot or undershoot.<br>
-        </p>
-        <h2 class="u-text u-text-default u-text-7"> Dash and a ghost dash</h2>
-        <img class="u-image u-image-default u-image-3" src="/images/284ef3f2694022877f187de982e3eba4.gif" alt="" data-image-width="1000" data-image-height="558">
-        <p class="u-text u-text-8">
-          <span style="font-weight: 700;"></span>After exploring the world for some more time you get the ability to dash. That'll give you some extra movility.<br>
-          <br>Another upgrade will make it so your dash will allow you to phase through lazers and projectiles. That does not only serve as a way for the player to explore more areas, but also allows the player to have more of an advantage when dealing with projectiles.<br>
+          <span style="font-weight: 700;"></span> The game features several upgrades to give the player a feeling of progression and change up the gameplay.
         </p>
       </div>
     </section>
-    <section class="u-clearfix u-grey-10 u-section-10" id="carousel_777f">
-      <div class="u-clearfix u-sheet u-sheet-1"></div>
+    <section class="u-clearfix u-section-9" id="sec-30d1">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-valign-top u-container-layout-1">
+                  <h2 class="u-text u-text-default u-text-1">Sword</h2>
+                  <img class="u-file-link u-image u-image-default u-image-1" src="/images/Pastedimage20220415144455-40.png" alt="" data-image-width="305" data-image-height="285" data-href="/files/Pastedimage20220415144455.png">
+                  <p class="u-text u-text-2">
+                    <span style="font-weight: 700;"></span> The first item you receive in the game is just your sword. The goal was to have as little of a tutorial in the game as possible. The player would be taught how to play by restricting his abilities until he has proven that he has understood how to use his other abilities. The sword will only be granted to the player after doing some basic platforming.
+                  </p>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-valign-top u-container-layout-2">
+                  <h2 class="u-text u-text-default u-text-3"> Air dashes</h2>
+                  <img class="u-image u-image-default u-image-2" src="/images/a6fb142e26b3b3bb89d4f05b5ed1842d.gif" alt="" data-image-width="1000" data-image-height="560" data-href="https://i.gyazo.com/a6fb142e26b3b3bb89d4f05b5ed1842d.gif">
+                  <p class="u-text u-text-4">
+                    <span style="font-weight: 700;"></span> This ability allows you to dash up to the areas you could not reach before. It was added as one of the ways we restrict some areas from being visited before the player has unlocked this ability.<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="u-clearfix u-section-11" id="sec-008c">
-      <div class="u-clearfix u-sheet u-sheet-1">
+    <section class="u-clearfix u-section-10" id="sec-5006">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Map</h2>
-        <img class="u-image u-image-default u-image-1" src="https://i.gyazo.com/36eff2f37cd5544bcb29b770244e3dab.gif)" alt="" data-image-width="1000" data-image-height="554">
-        <p class="u-text u-text-2">
-          <span style="font-weight: 700;"></span>By pressing TAB you can open up the map showing you the whole area and also the trail of where you have just explored. Pretty neat when you are stuck and not sure where to go next.<br>
-          <br>The system was added at the very last week of development cause of the realization that the map of the game would be too big to mentally remember.<br>
-        </p>
       </div>
     </section>
-    <section class="u-clearfix u-grey-10 u-section-12" id="carousel_6d07">
-      <div class="u-clearfix u-sheet u-sheet-1"></div>
+    <section class="u-clearfix u-section-11" id="sec-b144">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <p class="u-text u-text-1">
+                    <span style="font-weight: 700;"></span> By pressing TAB you can open up the map showing you the whole area and also the trail of where you have just explored. Pretty neat when you are stuck and not sure where to go next.<br>
+                    <br>The system was added at the very last week of development cause of the realization that the game's map would be too big to remember mentally.<br>
+                  </p>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <img class="u-image u-image-default u-image-1" src="https://i.gyazo.com/36eff2f37cd5544bcb29b770244e3dab.gif)" alt="" data-image-width="1000" data-image-height="554" data-href="https://i.gyazo.com/36eff2f37cd5544bcb29b770244e3dab.gif">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="u-clearfix u-section-13" id="carousel_1b5f">
-      <div class="u-clearfix u-sheet u-sheet-1">
+    <section class="u-clearfix u-section-12" id="sec-30fb">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Dynamic obstacles</h2>
-        <img class="u-image u-image-default u-image-1" src="/images/c9bb510bf0c12068f0272cc2d163d992.gif" alt="" data-image-width="1000" data-image-height="560">
-        <p class="u-text u-text-2">
-          <span style="font-weight: 700;"></span>To offer variety to the levels any obstacle could be made to be dynamic by adding some simple components to them. Any obstacle could be<br>- Moved back and forth<br>- Rotated on a periodic basis<br>- Be toggled at an interval<br>That added variety without the need to add more prefabs.<br>
-        </p>
       </div>
     </section>
-    <section class="u-clearfix u-grey-10 u-section-14" id="carousel_f0a2">
-      <div class="u-clearfix u-sheet u-sheet-1"></div>
+    <section class="u-clearfix u-section-13" id="sec-9d7b">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                  <p class="u-text u-text-1">
+                    <span style="font-weight: 700;"></span> To offer variety to the levels, any obstacle could be made dynamic by adding some simple components. Any obstacle could be- Moved back and forth- Rotated periodically- Be toggled at an intervalThis solution added variety without the need to add more prefabs.<br>
+                  </p>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-valign-middle u-container-layout-2">
+                  <img class="u-expanded-width u-image u-image-default u-image-1" src="/images/c9bb510bf0c12068f0272cc2d163d992.gif" alt="" data-image-width="1000" data-image-height="560" data-href="https://i.gyazo.com/c9bb510bf0c12068f0272cc2d163d992.gif">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="u-clearfix u-section-15" id="carousel_2c05">
-      <div class="u-clearfix u-sheet u-sheet-1">
+    <section class="u-clearfix u-section-14" id="sec-ba45">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h2 class="u-text u-text-default u-text-1"> Emergent enemy behaviour</h2>
-        <img class="u-image u-image-default u-image-1" src="/images/2af30d06d617fa61d56eee88ea82c961.gif" alt="" data-image-width="948" data-image-height="512">
-        <p class="u-text u-text-2">
-          <span style="font-weight: 700;"></span>Enemie AI itself is very basic, they basically do one or 2 things on a loop, but together they often lead to unexpected behaviours.<br>
-          <br>There is no real "team" system in the game so the player character and the enemy characters all interact in the same way with each other. I have planned to add a check to make sure the enemies cannot damage each other, but the way the enemies would hurt each other was very satisfying so it was kept that way.<br>
-        </p>
       </div>
     </section>
+    <section class="u-clearfix u-section-15" id="sec-7ef4">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                  <img class="u-image u-image-default u-image-1" src="/images/2af30d06d617fa61d56eee88ea82c961.gif" alt="" data-image-width="948" data-image-height="512" data-href="https://i.gyazo.com/2af30d06d617fa61d56eee88ea82c961.gif">
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-valign-middle u-container-layout-2">
+                  <p class="u-text u-text-1">
+                    <span style="font-weight: 700;"></span>Enemiy AI itself is very basic, they basically do one or 2 things on a loop, but together they often lead to unexpected behaviours.<br>
+                    <br>There is no real "team" system in the game so the player character and the enemy characters all interact in the same way with each other. I have planned to add a check to make sure the enemies cannot damage each other, but the way the enemies would hurt each other was very satisfying so it was kept that way.<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-1e77"><div class="u-align-left u-clearfix u-sheet u-sheet-1"></div></footer>
