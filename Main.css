@@ -674,19 +674,7 @@
 
 .u-section-12 .u-text-1 {
   font-size: 1.5rem;
-  margin: -229px 130px 0 202px;
-}
-
-.u-section-12 .u-text-2 {
-  font-size: 1.875rem;
-  width: 234px;
-  margin: 38px auto 60px;
-}
-
-.u-section-12 .u-btn-1 {
-  background-image: none;
-  text-decoration: underline !important;
-  padding: 0;
+  margin: -229px 130px 60px 202px;
 }
 
 @media (max-width: 1199px) {
@@ -699,7 +687,7 @@
 
 @media (max-width: 991px) {
   .u-section-12 .u-text-1 {
-    margin-right: 0;
     margin-left: 0;
+    margin-right: 0;
   }
 }
