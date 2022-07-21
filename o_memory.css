@@ -20,7 +20,7 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.header-navlink {
+.header-link {
   display: contents;
 }
 .header-nameandtitle {
@@ -61,7 +61,7 @@
   align-items: flex-start;
   margin-right: 0px;
 }
-.header-link {
+.header-link1 {
   display: contents;
 }
 .header-icon {
@@ -73,7 +73,7 @@
   margin-right: 4px;
   text-decoration: none;
 }
-.header-link1 {
+.header-link2 {
   display: contents;
 }
 .header-icon2 {
@@ -85,7 +85,7 @@
   margin-right: 4px;
   text-decoration: none;
 }
-.header-link2 {
+.header-link3 {
   display: contents;
 }
 .header-icon4 {
