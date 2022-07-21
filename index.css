@@ -20,7 +20,7 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.header-link {
+.header-navlink {
   display: contents;
 }
 .header-nameandtitle {
@@ -61,7 +61,7 @@
   align-items: flex-start;
   margin-right: 0px;
 }
-.header-link1 {
+.header-link {
   display: contents;
 }
 .header-icon {
@@ -73,7 +73,7 @@
   margin-right: 4px;
   text-decoration: none;
 }
-.header-link2 {
+.header-link1 {
   display: contents;
 }
 .header-icon2 {
@@ -85,7 +85,7 @@
   margin-right: 4px;
   text-decoration: none;
 }
-.header-link3 {
+.header-link2 {
   display: contents;
 }
 .header-icon4 {
@@ -285,7 +285,7 @@
   margin-bottom: 5px;
 }
 
-.home-container {
+.index-container {
   width: 100%;
   display: flex;
   overflow: auto;
@@ -294,7 +294,7 @@
   flex-direction: column;
   background-color: var(--dl-color-primary-100);
 }
-.home-container1 {
+.index-container1 {
   flex: 1;
   width: 100%;
   display: flex;
@@ -302,20 +302,20 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.home-nomemory {
+.index-nomemory {
   width: 1143px;
   height: 454px;
   display: flex;
   align-self: center;
   align-items: flex-start;
 }
-.home-navlink {
+.index-navlink {
   display: contents;
 }
-.home-nomemory1 {
+.index-nomemory1 {
   text-decoration: none;
 }
-.home-iframe {
+.index-iframe {
   width: 685px;
   height: 428px;
   align-self: center;
@@ -325,20 +325,20 @@
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
-.home-neonworld {
+.index-neonworld {
   width: 1143px;
   height: 454px;
   display: flex;
   align-self: center;
   align-items: flex-start;
 }
-.home-navlink1 {
+.index-navlink1 {
   display: contents;
 }
-.home-neonworld1 {
+.index-neonworld1 {
   text-decoration: none;
 }
-.home-iframe1 {
+.index-iframe1 {
   width: 685px;
   height: 428px;
   align-self: center;
@@ -348,20 +348,20 @@
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
-.home-dualinferno {
+.index-dualinferno {
   width: 1143px;
   height: 454px;
   display: flex;
   align-self: center;
   align-items: flex-start;
 }
-.home-navlink2 {
+.index-navlink2 {
   display: contents;
 }
-.home-dualinferno1 {
+.index-dualinferno1 {
   text-decoration: none;
 }
-.home-iframe2 {
+.index-iframe2 {
   width: 685px;
   height: 428px;
   align-self: center;
@@ -371,20 +371,20 @@
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
-.home-dualinferno2 {
+.index-dualinferno2 {
   width: 1143px;
   height: 454px;
   display: flex;
   align-self: center;
   align-items: flex-start;
 }
-.home-navlink3 {
+.index-navlink3 {
   display: contents;
 }
-.home-dualinferno3 {
+.index-dualinferno3 {
   text-decoration: none;
 }
-.home-iframe3 {
+.index-iframe3 {
   width: 685px;
   height: 428px;
   align-self: center;
@@ -394,7 +394,7 @@
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
-.home-grid {
+.index-grid {
   width: 1057px;
   display: grid;
   margin-top: 20px;
@@ -403,62 +403,62 @@
   grid-column-gap: 5px;
   grid-template-columns: 1fr 1fr 1fr 1fr;;
 }
-.home-spacejuice {
+.index-spacejuice {
   text-decoration: none;
 }
-.home-mushroomclouds {
+.index-mushroomclouds {
   text-decoration: none;
 }
-.home-pugio {
+.index-pugio {
   text-decoration: none;
 }
-.home-fruitbrawl {
+.index-fruitbrawl {
   text-decoration: none;
 }
 @media(max-width: 991px) {
-  .home-container1 {
+  .index-container1 {
     flex: 0;
     width: 100%;
     align-self: flex-start;
     margin-left: 0px;
   }
-  .home-nomemory {
+  .index-nomemory {
     width: 440px;
   }
-  .home-iframe {
+  .index-iframe {
     display: none;
   }
-  .home-neonworld {
+  .index-neonworld {
     width: 440px;
   }
-  .home-iframe1 {
+  .index-iframe1 {
     display: none;
   }
-  .home-dualinferno {
+  .index-dualinferno {
     width: 440px;
   }
-  .home-iframe2 {
+  .index-iframe2 {
     display: none;
   }
-  .home-dualinferno2 {
+  .index-dualinferno2 {
     width: 440px;
   }
-  .home-iframe3 {
+  .index-iframe3 {
     display: none;
   }
-  .home-grid {
+  .index-grid {
     width: 535px;
     padding-left: 0px;
     grid-template-columns: 1fr 1fr;;
   }
 }
 @media(max-width: 767px) {
-  .home-grid {
+  .index-grid {
     grid-template-columns: 1fr;
   }
 }
 @media(max-width: 479px) {
-  .home-grid {
+  .index-grid {
     width: 260px;
     grid-template-columns: 1fr;
   }
