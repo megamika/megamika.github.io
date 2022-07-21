@@ -355,6 +355,12 @@
   align-self: center;
   align-items: flex-start;
 }
+.home-navlink2 {
+  display: contents;
+}
+.home-dualinferno1 {
+  text-decoration: none;
+}
 .home-iframe2 {
   width: 685px;
   height: 428px;
@@ -372,7 +378,7 @@
   align-self: center;
   align-items: flex-start;
 }
-.home-navlink2 {
+.home-navlink3 {
   display: contents;
 }
 .home-dualinferno3 {
