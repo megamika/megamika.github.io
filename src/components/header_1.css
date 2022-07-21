@@ -1,0 +1,14 @@
+.header_1-container {
+  display: flex;
+  position: relative;
+}
+.header_1-text {
+  color: var(--dl-color-gray-900);
+  font-size: 45px;
+  align-self: center;
+  margin-top: 20px;
+  text-align: left;
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
+

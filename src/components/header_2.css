@@ -1,0 +1,13 @@
+.header_2-container {
+  display: flex;
+  position: relative;
+}
+.header_2-text {
+  color: var(--dl-color-primary-900);
+  font-size: 30px;
+  align-self: center;
+  margin-top: 20px;
+  text-align: left;
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
