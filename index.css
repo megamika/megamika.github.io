@@ -791,6 +791,9 @@
     padding-left: 0px;
     grid-template-columns: 1fr 1fr;;
   }
+  .index-text {
+    width: 700px;
+  }
 }
 @media(max-width: 767px) {
   .index-grid {
@@ -799,6 +802,9 @@
   .index-grid1 {
     width: 537px;
     grid-template-columns: 1fr;
+  }
+  .index-text {
+    width: 100%;
   }
 }
 @media(max-width: 479px) {
