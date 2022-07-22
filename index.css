@@ -222,7 +222,9 @@
 .index-container01 {
   flex: 1;
   width: 100%;
+  height: 100%;
   display: flex;
+  z-index: 100;
   align-self: center;
   align-items: flex-start;
   flex-direction: column;
@@ -713,12 +715,12 @@
   text-decoration: none;
 }
 .index-grid1 {
-  width: 507px;
+  width: 1051px;
   display: grid;
   position: relative;
-  align-self: flex-start;
+  align-self: center;
   margin-top: 20px;
-  margin-left: 70px;
+  margin-left: -;
   grid-row-gap: 20px;
   margin-bottom: 20px;
   grid-column-gap: 20px;
@@ -739,6 +741,14 @@
   align-self: center;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+@media(max-width: 1600px) {
+  .index-container {
+    z-index: -3;
+  }
+  .index-container01 {
+    z-index: 100;
+  }
 }
 @media(max-width: 991px) {
   .index-container01 {
