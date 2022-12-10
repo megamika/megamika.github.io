@@ -1,8 +1,8 @@
-.header_2-container {
+.header2-container {
   display: flex;
   position: relative;
 }
-.header_2-text {
+.header2-text {
   color: var(--dl-color-primary-900);
   font-size: 30px;
   align-self: center;

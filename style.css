@@ -9,17 +9,17 @@
   --dl-color-danger-700: #E14747;
   --dl-color-gray-black: #000000ff;
   --dl-color-gray-white: #FFFFFF;
-  --dl-color-primary-50: #16181aff;
+  --dl-color-primary-50: #202020ff;
   --dl-size-size-medium: 96px;
   --dl-size-size-xlarge: 192px;
   --dl-size-size-xsmall: 16px;
   --dl-space-space-unit: 16px;
-  --dl-color-primary-100: #1b1f23ff;
-  --dl-color-primary-300: #24292eff;
-  --dl-color-primary-500: #2d343bff;
-  --dl-color-primary-700: #566370ff;
-  --dl-color-primary-800: #879cb0ff;
-  --dl-color-primary-900: #b7c6d4ff;
+  --dl-color-primary-100: #272727ff;
+  --dl-color-primary-300: #313131ff;
+  --dl-color-primary-500: #4c4c4cff;
+  --dl-color-primary-700: #6f6f6fff;
+  --dl-color-primary-800: #b9b9b9ff;
+  --dl-color-primary-900: #d2d2d2ff;
   --dl-color-success-300: #199033;
   --dl-color-success-500: #32A94C;
   --dl-color-success-700: #4CC366;
@@ -77,8 +77,9 @@
 }
 .teleport-show {
   display: flex !important;
+  transform: none !important;
 }
-.heading {
+.Heading {
   font-size: 32px;
   font-family: Inter;
   font-weight: 700;
@@ -86,7 +87,7 @@
   text-transform: none;
   text-decoration: none;
 }
-.content {
+.Content {
   font-size: 16px;
   font-family: Roboto Mono;
   font-weight: 400;
