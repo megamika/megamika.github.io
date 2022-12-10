@@ -118,6 +118,12 @@
 .header-root-class-name4 {
   background-color: var(--dl-color-primary-300);
 }
+.header-root-class-name5 {
+  background-color: var(--dl-color-primary-300);
+}
+.header-root-class-name6 {
+  background-color: var(--dl-color-primary-300);
+}
 @media(max-width: 991px) {
   .header-nameandtitle {
     margin-top: 10px;
@@ -171,6 +177,28 @@
   margin-bottom: 0px;
 }
 .header1-root-class-name3 {
+  align-self: center;
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+}
+
+.header1-root-class-name5 {
+  align-self: center;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+.header1-root-class-name6 {
+  align-self: center;
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+}
+.header1-root-class-name7 {
   align-self: center;
   margin-top: 10px;
   margin-left: 0px;
@@ -289,7 +317,7 @@
 .omemory-v2-text08 {
   color: var(--dl-color-primary-900);
   width: 1000px;
-  font-size: 25px;
+  font-size: 17px;
   align-self: center;
   margin-top: 10px;
   margin-left: 0px;

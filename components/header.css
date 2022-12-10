@@ -118,6 +118,12 @@
 .header-root-class-name4 {
   background-color: var(--dl-color-primary-300);
 }
+.header-root-class-name5 {
+  background-color: var(--dl-color-primary-300);
+}
+.header-root-class-name6 {
+  background-color: var(--dl-color-primary-300);
+}
 @media(max-width: 991px) {
   .header-nameandtitle {
     margin-top: 10px;
