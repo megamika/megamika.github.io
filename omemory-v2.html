@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>omemoryV2 - Mikael Zakoyan - Tech Design</title>
+    <meta
+      property="og:title"
+      content="omemoryV2 - Mikael Zakoyan - Tech Design"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Roboto Mono;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="shortcut icon"
+      href="public/playground_assets/icon.png"
+      type="icon/png"
+      sizes="32x32"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <link href="./omemory-v2.css" rel="stylesheet" />
+      <script
+        type="text/javascript"
+        src="https://unpkg.com/dangerous-html@0.1.11/dist/default/lib.umd.js"
+      ></script>
+
+      <div class="omemory-v2-container">
+        <header
+          data-role="Header"
+          class="header-header header-root-class-name3"
+        >
+          <div class="header-container">
+            <a href="index.html" class="header-navlink">
+              <div class="header-nameandtitle">
+                <span class="header-name"><span>Mikael Zakoyan</span></span>
+                <span class="header-title"><span>Technical Design</span></span>
+              </div>
+            </a>
+            <div class="header-socialandresume">
+              <div class="header-social">
+                <a
+                  href="https://www.instagram.com/megamika2/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="header-link"
+                >
+                  <svg viewBox="0 0 877.7142857142857 1024" class="header-icon">
+                    <path
+                      d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://twitter.com/MikaZakoyan"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="header-link1"
+                >
+                  <svg viewBox="0 0 1024 1024" class="header-icon2">
+                    <path
+                      d="M888.875 224.512c-7.936 10.325-16.683 20.267-26.283 29.696-9.941 9.899-14.805 24.192-11.861 38.741 1.579 7.765 2.56 17.237 2.603 27.051 0 224.256-103.637 382.763-247.893 464.981-112.939 64.384-253.355 83.413-393.472 47.787 53.12-15.403 104.96-39.296 153.301-72.107 6.272-4.224 11.648-10.368 15.019-17.963 9.557-21.547-0.128-46.763-21.675-56.32-118.357-52.608-176.213-125.056-203.477-195.968-17.792-46.251-23.296-93.781-22.187-137.685 0.896-34.603 5.888-66.56 11.861-93.099 16.853 14.592 34.304 30.080 52.736 44.245 87.509 67.285 197.291 105.813 315.563 102.741 23.083-0.64 41.557-19.499 41.557-42.667v-43.136c-0.085-7.637 0.384-15.232 1.451-22.784 4.821-34.389 21.504-66.944 49.579-91.349 30.933-26.923 69.803-38.741 107.776-36.096s74.795 19.755 101.717 50.688c10.752 12.203 27.691 17.749 44.075 12.971 9.856-2.859 19.755-6.101 29.653-9.728zM956.757 93.141c-31.573 22.272-64.981 39.509-97.579 51.413-39.723-35.669-89.216-55.552-139.776-59.093-59.648-4.139-121.003 14.464-169.685 56.832-44.203 38.443-70.485 89.899-78.080 143.872-1.579 11.307-2.347 22.741-2.304 34.133-82.005-6.059-157.611-36.267-219.776-84.096-33.067-25.429-62.336-55.851-86.784-90.24-13.653-19.2-40.277-23.765-59.477-10.112-6.571 4.651-11.392 10.795-14.293 17.451 0 0-5.632 12.757-12.16 32.427-4.779 14.379-10.283 33.067-15.232 55.040-6.955 30.805-12.885 68.352-13.909 109.696-1.323 52.352 5.12 111.445 27.819 170.496 29.141 75.733 83.883 148.395 176.939 205.781-66.944 30.976-138.453 44.331-207.915 41.259-23.552-1.024-43.477 17.195-44.501 40.747-0.725 16.597 8.107 31.403 21.888 39.168 209.28 116.267 444.843 114.261 625.749 11.136 172.416-98.176 290.987-285.867 290.987-539.051-0.043-7.125-0.341-14.080-0.981-20.864 42.923-47.573 71.509-103.637 85.163-161.323 5.419-22.912-8.789-45.909-31.701-51.328-12.373-2.944-24.747-0.128-34.432 6.656z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/mikael-zakoyan/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="header-link2"
+                >
+                  <svg
+                    viewBox="0 0 877.7142857142857 1024"
+                    class="header-icon4"
+                  >
+                    <path
+                      d="M199.429 357.143v566.286h-188.571v-566.286h188.571zM211.429 182.286c0.571 54.286-40.571 97.714-106.286 97.714v0h-1.143c-63.429 0-104-43.429-104-97.714 0-55.429 42.286-97.714 106.286-97.714 64.571 0 104.571 42.286 105.143 97.714zM877.714 598.857v324.571h-188v-302.857c0-76-27.429-128-95.429-128-52 0-82.857 34.857-96.571 68.571-4.571 12.571-6.286 29.143-6.286 46.286v316h-188c2.286-513.143 0-566.286 0-566.286h188v82.286h-1.143c24.571-38.857 69.143-95.429 170.857-95.429 124 0 216.571 81.143 216.571 254.857z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+              <a
+                href="https://pdfhost.io/v/1tg7gI72q_Mikael_Zakoyan_resume"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="header-resume"
+              >
+                <span>Resume</span>
+              </a>
+            </div>
+          </div>
+        </header>
+        <div class="header1-container">
+          <span class="header1-text"><span>Trailer</span></span>
+        </div>
+        <iframe
+          src="https://www.youtube.com/embed/6OK_81Y8vD8"
+          allowfullscreen=""
+          class="omemory-v2-video"
+        ></iframe>
+        <div class="omemory-v2-playcontainer">
+          <a
+            href="https://megamika.itch.io/no-memory"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="omemory-v2-link"
+          >
+            <div class="play-button-play-button">
+              <span class="play-button-text"><span>Play</span></span>
+            </div>
+          </a>
+        </div>
+        <div class="header1-container">
+          <span class="header1-text"><span>Screenshots</span></span>
+        </div>
+        <div class="omemory-v2-screenshots">
+          <img
+            alt="image"
+            src="https://media.discordapp.net/attachments/767823889723818007/1051206885010837524/image.png?width=1248&amp;height=645"
+            class="omemory-v2-image"
+          />
+          <img
+            alt="image"
+            src="https://media.discordapp.net/attachments/767823889723818007/1051206057910861904/image.png?width=1157&amp;height=651"
+            class="omemory-v2-image01"
+          />
+          <img
+            alt="image"
+            src="https://media.discordapp.net/attachments/767823889723818007/1051206501487882310/image.png?width=1248&amp;height=650"
+            class="omemory-v2-image02"
+          />
+          <img
+            alt="image"
+            src="https://media.discordapp.net/attachments/767823889723818007/1051206652684148908/image.png?width=1248&amp;height=647"
+            class="omemory-v2-image03"
+          />
+        </div>
+        <div class="header1-container header1-root-class-name2">
+          <span class="header1-text">
+            <span>My roles and responsibilities</span>
+          </span>
+        </div>
+        <span class="omemory-v2-text">
+          <span>
+            • Being in charge of and implementing the technical implementation
+            of the game
+          </span>
+          <br />
+          <br />
+          <span>
+            • Designing the combat system and the way the enemies would interact
+            with the player
+          </span>
+          <br />
+          <br />
+          <span>
+            • Creating animations and character models for the player/enemies
+          </span>
+        </span>
+        <div class="header1-container header1-root-class-name1">
+          <span class="header1-text"><span>Focus system</span></span>
+        </div>
+        <div class="omemory-v2-container01">
+          <div class="omemory-v2-container02">
+            <span class="omemory-v2-text08">
+              To use some player abilities you need to earn/spend focus points.
+              You can earn them by dealing damage to the enemies and those
+              points allow you to do a wide range of things.
+            </span>
+            <img
+              alt="image"
+              src="https://i.gyazo.com/5342bd5ca26df50e0732b5ad1a36f7d0.gif"
+              class="omemory-v2-image04"
+            />
+          </div>
+          <div class="omemory-v2-container03">
+            <span class="omemory-v2-text09">
+              The focus system creates tense encounters with the enemies which
+              promotes decision making picking one ability over the other.
+            </span>
+            <span class="omemory-v2-text10">
+              There used to be no focus system earlier in the game's live and it
+              felt like the game was missing something before that, adding it
+              enhanced the gameplay greatly.
+            </span>
+          </div>
+        </div>
+        <div class="header1-container header1-root-class-name3">
+          <span class="header1-text"><span>Player abilities</span></span>
+        </div>
+        <span class="omemory-v2-text11">
+          The player abilities in the game were as follows.
+        </span>
+        <div class="omemory-v2-container04">
+          <div class="omemory-v2-container05">
+            <span class="omemory-v2-roll">Roll</span>
+            <div class="omemory-v2-div">
+              <dangerous-html
+                html="<video alt='Video from Gyazo' width='500' autoplay muted loop playsinline><source src='https://i.gyazo.com/6f43c78b020b1ec4f1a765b9dddf08f0.mp4' type='video/mp4' /></video></a>"
+              ></dangerous-html>
+            </div>
+            <span class="omemory-v2-text12">
+              The roll is a basic movement ability which gives you invincibility
+              frames that let you evade enemy attacks.
+            </span>
+          </div>
+          <div class="omemory-v2-container06">
+            <span class="omemory-v2-three-hit">3 Hit combo</span>
+            <div class="omemory-v2-div01">
+              <dangerous-html
+                html="<video alt='Video from Gyazo' width='500' autoplay muted loop playsinline><source src='https://i.gyazo.com/f3912a53b9398971914052bd5d63b450.mp4' type='video/mp4' /></video></a>"
+              ></dangerous-html>
+            </div>
+            <span class="omemory-v2-text13">
+              This is your main damage dealer.
+            </span>
+          </div>
+        </div>
+        <div class="omemory-v2-container07">
+          <div class="omemory-v2-container08">
+            <span class="omemory-v2-charge-attack">Charge attack</span>
+            <div class="omemory-v2-div02">
+              <dangerous-html
+                html="<a href='https://gyazo.com/c05b4494aff43602f890e63b9b1026e0'><video alt='Video from Gyazo' width='500' autoplay muted loop playsinline controls><source src='https://i.gyazo.com/c05b4494aff43602f890e63b9b1026e0.mp4' type='video/mp4' /></video></a>"
+              ></dangerous-html>
+            </div>
+            <span class="omemory-v2-text14">
+              An attack that deals more damage compared to the normal combo and
+              can hit more enemies at once
+            </span>
+          </div>
+          <div class="omemory-v2-container09">
+            <span class="omemory-v2-fireball">
+              <span class="omemory-v2-text15">Heal</span>
+              <br />
+            </span>
+            <div class="omemory-v2-div03">
+              <dangerous-html
+                html="<a href='https://gyazo.com/141b1f60ef83d4ec0bddf24b20a498a0'><video alt='Video from Gyazo' width='500' autoplay muted loop playsinline controls><source src='https://i.gyazo.com/141b1f60ef83d4ec0bddf24b20a498a0.mp4' type='video/mp4' /></video></a>"
+              ></dangerous-html>
+            </div>
+            <span class="omemory-v2-text17">
+              Probably the most useful way to spend your focus points, spend
+              some focus and a bit of time in exchange for health.
+            </span>
+          </div>
+        </div>
+        <span class="omemory-v2-text18">
+          There are also some abilities that can be unlocked later on during the
+          exploration
+        </span>
+        <div class="omemory-v2-container10">
+          <div class="omemory-v2-container11">
+            <span class="omemory-v2-fireball01">Fireball</span>
+            <span class="omemory-v2-text19">
+              Has a homing effect and deals damage over time after being
+              inflicted upon enemies.
+            </span>
+            <div class="omemory-v2-div04">
+              <dangerous-html
+                html="<video alt='Video from Gyazo' width='500' autoplay muted loop playsinline><source src='https://i.gyazo.com/d6f7a16a2ad5f89652f841c85a47c9f6.mp4' type='video/mp4' /></video></a>"
+              ></dangerous-html>
+            </div>
+            <span class="omemory-v2-text20">
+              This is one of the basic ways you can use your focus points in the
+              game on. It does decent damage and allows you to take less of a
+              risk by attacking from a distance, however it drains a bit if your
+              focus.
+            </span>
+          </div>
+          <div class="omemory-v2-container12">
+            <span class="omemory-v2-electric-dash">Electric dash</span>
+            <div class="omemory-v2-div05">
+              <dangerous-html
+                html="<a href='https://gyazo.com/40307f236b016f9f326f7f6156504ab3'><video alt='Video from Gyazo' width='500' autoplay muted loop playsinline controls><source src='https://i.gyazo.com/40307f236b016f9f326f7f6156504ab3.mp4' type='video/mp4' /></video></a>"
+              ></dangerous-html>
+            </div>
+            <span class="omemory-v2-text21">
+              A roll with a highter range that allows you to cover more distance
+              and damage enemies as you zip past them
+            </span>
+          </div>
+        </div>
+        <span class="omemory-v2-fireball02">AOE attack</span>
+        <span class="omemory-v2-text22">
+          A huge blast that deals a lot of damage
+        </span>
+        <div class="omemory-v2-div06">
+          <dangerous-html
+            html="<a href='https://gyazo.com/a0b372eadd65c15dd8a79793f59c13aa'><video alt='Video from Gyazo' width='500' autoplay muted loop playsinline controls><source src='https://i.gyazo.com/a0b372eadd65c15dd8a79793f59c13aa.mp4' type='video/mp4' /></video></a>"
+          ></dangerous-html>
+        </div>
+        <span class="omemory-v2-text23">
+          This is the most powerful ability that you can use your focus points
+          on. Before we had a focus system players would tent to rely on it too
+          much since they only needed to wait a cooldown before using it, now it
+          was more of a difficult decizion of whether to use it or save up the
+          focus points for healing and ranged damage.
+        </span>
+        <span class="omemory-v2-text24">
+          All these abilities come together to create an engaging combat system
+        </span>
+        <div class="omemory-v2-div07">
+          <dangerous-html
+            html="<a href='https://gyazo.com/1ff64e53e7350b968e286c9aa03df221'><video alt='Video from Gyazo' width='1000' autoplay muted loop playsinline controls><source src='https://i.gyazo.com/1ff64e53e7350b968e286c9aa03df221.mp4' type='video/mp4' /></video></a>"
+          ></dangerous-html>
+        </div>
+        <span class="omemory-v2-fireball03">Enemies</span>
+        <span class="omemory-v2-text25">
+          Every game needs enemies to fight, In total we managed to cram 12
+          enemies into the game
+        </span>
+        <img
+          alt="image"
+          src="https://iili.io/HnsQQmx.png"
+          class="omemory-v2-image05"
+        />
+        <span class="omemory-v2-fireball04">Enemy AI</span>
+        <span class="omemory-v2-text26">
+          The way the enemy AI would work was very simple, there were action
+          nodes, with each **action** the AI could pick to do that action
+          randomly based on which **Action set** was currently active.
+        </span>
+        <div class="omemory-v2-container13">
+          <div class="omemory-v2-container14">
+            <span class="omemory-v2-fireball05">
+              Actions available to the final boss
+            </span>
+            <img
+              alt="image"
+              src="https://iili.io/HnsZCBI.png"
+              class="omemory-v2-image06"
+            />
+          </div>
+          <div class="omemory-v2-container15">
+            <img
+              alt="image"
+              src="https://iili.io/HnsZKIR.png"
+              class="omemory-v2-image07"
+            />
+            <span class="omemory-v2-text27">
+              The action as is doesn't do anything, it needs **Action steps** in
+              order to do anything
+            </span>
+          </div>
+        </div>
+        <span class="omemory-v2-text28">
+          For example if I want an enemy to attack with it's fists I add 2
+          Charge Release nodes which would tell the enemy to charge up it's
+          attack and then stop charging it up. Since the enemies would be
+          inherited from the same character base as the player (allowing them to
+          share animations and abilities) it was very similar to the player's
+          inputs.
+        </span>
+        <span class="omemory-v2-text29">
+          I could also adjust each action step according to my needs for that
+          enemy
+        </span>
+        <img
+          alt="image"
+          src="https://iili.io/HnsZ3mv.png"
+          class="omemory-v2-image08"
+        />
+        <span class="omemory-v2-text30">
+          Each action step had it's own little parameters to play with.
+        </span>
+        <div class="omemory-v2-container16">
+          <div class="omemory-v2-container17">
+            <span class="omemory-v2-text31">
+              The way the action sets were picked out was pre defined for each
+              enemy. There was the **Normal** action set and an **Agressive**
+              action set. We could also add other action sets by specifying the
+              amount of health the enemy would need to be at and the name of the
+              new action set.
+            </span>
+            <img
+              alt="image"
+              src="https://media.discordapp.net/attachments/767823889723818007/1071819826978361474/image.png"
+              class="omemory-v2-image09"
+            />
+          </div>
+          <div class="omemory-v2-container18">
+            <span class="omemory-v2-fireball06">
+              Action sets of the final boss
+            </span>
+            <img
+              alt="image"
+              src="https://iili.io/HnsZfXp.png"
+              class="omemory-v2-image10"
+            />
+          </div>
+        </div>
+        <span class="omemory-v2-fireball07">
+          Enemy Archetypes and Sub Archetypes
+        </span>
+        <span class="omemory-v2-text32">
+          The way we managed to have 12 enemy types in the game is by splitting
+          the main enemy Archetypes into subtypes with similar move sets and
+          ideas, but with minor tweaks either making them more powerful or have
+          more health.
+        </span>
+        <span class="omemory-v2-text33">
+          Here is a quick breakdown of all the Archetypes
+        </span>
+        <div class="omemory-v2-container19">
+          <img
+            alt="image"
+            src="https://iili.io/HnsZn1t.png"
+            class="omemory-v2-image11"
+          />
+          <span class="omemory-v2-text34">
+            A lot of the enemies were designed with the purpose of encouraging
+            the player to use certain abilities over others. For example the
+            Protector uses his shield a lot, which can be easily overcome by
+            using your **fireball ability**, the scout dashes around a lot which
+            encourages the player to do the same using his **electric dash**.
+          </span>
+        </div>
+        <span class="omemory-v2-fireball08">Iteration on the enemies</span>
+        <div class="omemory-v2-container20">
+          <img
+            alt="image"
+            src="https://iili.io/HnsZorX.png"
+            class="omemory-v2-image12"
+          />
+          <div class="omemory-v2-container21">
+            <span class="omemory-v2-text35">
+              The very first version of the game before a big rework had a very
+              different enemy roster/enemy design.
+            </span>
+            <span class="omemory-v2-text36">
+              <span>
+                This first iteration had every enemy contain it's own skeletal
+                mesh and animations which greatly limited the depth we could
+                achieve with combat, mostly due to the time it would take to do
+                so for each enemy, the enemies themselves also didn't look very
+                imposing and like a danger to the player.
+              </span>
+              <br />
+            </span>
+            <span class="omemory-v2-text39">
+              <span>
+                Those fallbacks were fixed with the second iteration in which I
+                made them look a lot more imposing and reuse the same skeleton
+                to be able to share animations and abilities with each other.
+              </span>
+              <br />
+            </span>
+          </div>
+        </div>
+        <span class="omemory-v2-fireball09">
+          <span>Level Editor</span>
+          <br />
+        </span>
+        <span class="omemory-v2-text44">
+          To quickly and efficiently make new rooms and maps (and as a personal
+          challenge) I coded in a level editor into the game.
+        </span>
+        <div class="omemory-v2-container22">
+          <div class="omemory-v2-container23">
+            <span class="omemory-v2-fireball10">Campaign overview</span>
+            <img
+              alt="image"
+              src="https://iili.io/HnsDVsV.png"
+              class="omemory-v2-image13"
+            />
+          </div>
+          <div class="omemory-v2-container24">
+            <span class="omemory-v2-text45">
+              The level editor is available in the final build of the game for
+              other people to make levels. The editor allows you to
+            </span>
+            <span class="omemory-v2-text46">
+              <span>• Create rooms</span>
+              <br />
+              <span>• Arrange the created rooms into a map</span>
+              <br />
+              <span>• Connect several maps using transition doors</span>
+            </span>
+            <span class="omemory-v2-text52">
+              Developing the editor during the production of the game made
+              created some challenges, particularly if the editor contained a
+              bug that prevented the level designer from continuing his job
+              untill the issue has been resolved
+            </span>
+            <span class="omemory-v2-text53">
+              The campaign overview screen contained a quick way to acess all of
+              the rooms and maps that have been created for the currently edited
+              campaign, you also have an ability to quickly open the campaign
+              folder and export it as one file to be used in a final build.
+            </span>
+          </div>
+        </div>
+        <span class="omemory-v2-fireball11">Map editor</span>
+        <span class="omemory-v2-text54">
+          The map editor allows you to simply arrange your created rooms
+          together and test out the map from any room that you want. you are
+          also able to quickly jump into the room editor to make tweaks to the
+          room and then go back out.
+        </span>
+        <div class="omemory-v2-div08">
+          <dangerous-html
+            html="<a href='https://gyazo.com/54f3adbb3eaae563cdc59392df5b87f4'><video alt='Video from Gyazo' width='1000' autoplay muted loop playsinline controls><source src='https://i.gyazo.com/54f3adbb3eaae563cdc59392df5b87f4.mp4' type='video/mp4' /></video></a>"
+          ></dangerous-html>
+        </div>
+        <div class="omemory-v2-container25">
+          <div class="omemory-v2-container26">
+            <span class="omemory-v2-fireball12">Act 1</span>
+            <img
+              alt="image"
+              src="https://iili.io/HnsDBUX.png"
+              class="omemory-v2-image14"
+            />
+          </div>
+          <div class="omemory-v2-container27">
+            <span class="omemory-v2-fireball13">Act 2</span>
+            <img
+              alt="image"
+              src="https://iili.io/HnsDxOG.png"
+              class="omemory-v2-image15"
+            />
+          </div>
+        </div>
+        <span class="omemory-v2-fireball14">Act 3</span>
+        <img
+          alt="image"
+          src="https://iili.io/HnsDzbf.png"
+          class="omemory-v2-image16"
+        />
+        <span class="omemory-v2-text55">
+          For the final game the level designer has created around 120 rooms in
+          total and that created some technical and performance difficulties.
+          Some things that were not a big deal with a smaller amount of rooms
+          suddenly became a problem when the amount of rooms has expanded and
+          the number of objects was increased.
+        </span>
+        <span class="omemory-v2-text56">
+          A lot of the things used to run on tick (every frame, on update) and
+          that was a huge problem for the performance, the game was then
+          refactored to instead use events which dramatically improved the
+          performance and loading times.
+        </span>
+        <span class="omemory-v2-fireball15">Room editor</span>
+        <span class="omemory-v2-text57">
+          The room editor was the editor that contained the most features, you
+          could acess all of the assets relevant to level editing on the bottom,
+          on the left there was a rudamentary hierarchy to show all the spawned
+          items, you also had an ability to translate, scale and rotate any
+          object.
+        </span>
+        <span class="omemory-v2-text58">
+          The created room will then be saved as a JSON file and can be edited,
+          shared and simply commited.
+        </span>
+        <div class="omemory-v2-div09">
+          <dangerous-html
+            html="<a href='https://gyazo.com/fc8b1092a646385f0382358fd803765f'><video alt='Video from Gyazo' width='1000' autoplay muted loop playsinline controls><source src='https://i.gyazo.com/fc8b1092a646385f0382358fd803765f.mp4' type='video/mp4' /></video></a>"
+          ></dangerous-html>
+        </div>
+        <span class="omemory-v2-text59">
+          For some objects (mostly the enemies) you also were exposed to some
+          parameters. For example for the enemies in the game you had an ability
+          to change which wave they would spawn at, if they are a boss or not
+          (the health bar would appear in that case) and if they even count in
+          the wave system.
+        </span>
+        <img
+          alt="image"
+          src="https://iili.io/HnsDAs2.png"
+          class="omemory-v2-image17"
+        />
+        <span class="omemory-v2-fireball16">Saving progress</span>
+        <span class="omemory-v2-text60">
+          <span>
+            The game also gives the players a way to save progress and load up
+            their save slot to continue playing. The game would automatically
+            save each time you would reach a checkpoint or unlock a new ability.
+          </span>
+          <br />
+        </span>
+        <span class="omemory-v2-fireball17">Unlocking a checkpoint</span>
+        <div class="omemory-v2-div10">
+          <dangerous-html
+            html="<a href='https://gyazo.com/3714055781eb53e850a1ef324110cd68'><video alt='Video from Gyazo' width='1000' autoplay muted loop playsinline controls><source src='https://i.gyazo.com/3714055781eb53e850a1ef324110cd68.mp4' type='video/mp4' /></video></a>"
+          ></dangerous-html>
+        </div>
+        <span class="omemory-v2-fireball18">Loading a game</span>
+        <img
+          alt="image"
+          src="https://iili.io/HnsD5fS.png"
+          class="omemory-v2-image18"
+        />
+        <span class="omemory-v2-fireball19">Iterations</span>
+        <span class="omemory-v2-text63">
+          <span>
+            A lot of things had to be cut, iterated and tweaked during the
+            development, this a quick overview of some things that didn't make
+            it/got reworked during the production process.
+          </span>
+          <br />
+        </span>
+        <span class="omemory-v2-fireball20">
+          Main character design iterations
+        </span>
+        <div class="omemory-v2-screenshots1">
+          <img
+            alt="image"
+            src="https://media.discordapp.net/attachments/767823889723818007/1051222854357758003/image.png"
+            class="omemory-v2-image19"
+          />
+          <img
+            alt="image"
+            src="https://iili.io/HnsD0Ob.png"
+            class="omemory-v2-image20"
+          />
+          <img
+            alt="image"
+            src="https://iili.io/HnsDl5u.png"
+            class="omemory-v2-image21"
+          />
+          <img
+            alt="image"
+            src="https://media.discordapp.net/attachments/767823889723818007/1051223193110720533/image.png"
+            class="omemory-v2-image22"
+          />
+        </div>
+        <span class="omemory-v2-fireball21">
+          The screenshot from the time the game was supposed to be a roguelike
+        </span>
+        <img
+          alt="image"
+          src="https://iili.io/HnsDMWQ.png"
+          class="omemory-v2-image23"
+        />
+        <span class="omemory-v2-fireball22">
+          The very first time the game was running
+        </span>
+        <img
+          alt="image"
+          src="https://iili.io/HnsDcJe.png"
+          class="omemory-v2-image24"
+        />
+        <span class="omemory-v2-fireball23">
+          First test run of the game with some art assets
+        </span>
+        <img
+          alt="image"
+          src="https://iili.io/HnsD707.png"
+          class="omemory-v2-image25"
+        />
+        <span class="omemory-v2-fireball24">Early map mockups</span>
+        <img
+          alt="image"
+          src="https://iili.io/HnsDYg9.png"
+          class="omemory-v2-image26"
+        />
+        <span class="omemory-v2-fireball25">
+          The version in between the early artstyle and the final artstyle
+        </span>
+        <img
+          alt="image"
+          src="https://iili.io/HnsDGzx.png"
+          class="omemory-v2-image27"
+        />
+        <div class="omemory-v2-container28"></div>
+      </div>
+    </div>
+  </body>
+</html>

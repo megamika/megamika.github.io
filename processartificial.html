@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Mikael Zakoyan - Tech Design</title>
-    <meta property="og:title" content="Mikael Zakoyan - Tech Design" />
+    <title>processartificial - Mikael Zakoyan - Tech Design</title>
+    <meta
+      property="og:title"
+      content="processartificial - Mikael Zakoyan - Tech Design"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -48,12 +51,12 @@
   </head>
   <body>
     <div>
-      <link href="./index.css" rel="stylesheet" />
+      <link href="./processartificial.css" rel="stylesheet" />
 
-      <div class="index-container">
+      <div class="processartificial-container">
         <header
           data-role="Header"
-          class="header-header header-root-class-name1"
+          class="header-header header-root-class-name4"
         >
           <div class="header-container">
             <a href="index.html" class="header-navlink">
@@ -115,195 +118,219 @@
             </div>
           </div>
         </header>
-        <div class="index-container01">
-          <div class="index-projectwannabe">
-            <a href="projectwannabe.html" class="index-navlink">
-              <div class="index-no-memory">
-                <img
-                  alt="image"
-                  src="https://media.discordapp.net/attachments/767823889723818007/1075036303483224114/image.png?width=961&amp;height=559"
-                  class="index-image"
-                />
-                <div class="index-container02">
-                  <span class="index-title">Project Wannabe</span>
-                </div>
-                <div class="index-container03">
-                  <span class="index-text">(WIP)</span>
-                  <img
-                    alt="image"
-                    src="https://media.discordapp.net/attachments/767823889723818007/1075038447519158362/UE5_Logo.png"
-                    class="index-image01"
-                  />
-                </div>
-              </div>
-            </a>
-            <iframe
-              src="https://www.youtube.com/embed/mmJ6geJBxIg"
-              allowfullscreen=""
-              class="index-iframe"
-            ></iframe>
+        <div class="header1-container">
+          <span class="header1-text"><span>Tech Reel</span></span>
+        </div>
+        <iframe
+          src="https://www.youtube.com/embed/-6v6liLSXpQ"
+          allowfullscreen=""
+          class="processartificial-video"
+        ></iframe>
+        <div class="processartificial-playcontainer">
+          <a
+            href="https://megamika.itch.io/pugio2d"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="processartificial-link"
+          >
+            <div class="play-button-play-button">
+              <span class="play-button-text"><span>Play</span></span>
+            </div>
+          </a>
+        </div>
+        <div class="header1-container">
+          <span class="header1-text"><span>Screenshots</span></span>
+        </div>
+        <div class="processartificial-screenshots">
+          <img
+            alt="image"
+            src="https://media.discordapp.net/attachments/767823889723818007/999794106127614023/unknown.png?width=1193&amp;height=671"
+            class="processartificial-image"
+          />
+          <img
+            alt="image"
+            src="https://media.discordapp.net/attachments/767823889723818007/999794127434698863/unknown.png?width=1193&amp;height=671"
+            class="processartificial-image01"
+          />
+          <img
+            alt="image"
+            src="https://media.discordapp.net/attachments/767823889723818007/999794146472636527/unknown.png?width=1193&amp;height=671"
+            class="processartificial-image02"
+          />
+          <img
+            alt="image"
+            src="https://media.discordapp.net/attachments/767823889723818007/999794166643036231/unknown.png?width=1193&amp;height=671"
+            class="processartificial-image03"
+          />
+        </div>
+        <div class="header1-container">
+          <span class="header1-text"><span>Level scripting</span></span>
+        </div>
+        <div class="processartificial-grid">
+          <img
+            alt="image"
+            src="https://media.discordapp.net/attachments/767823889723818007/999794626636562463/unknown.png"
+            class="processartificial-image04"
+          />
+          <span class="processartificial-text">
+            <span>Problem</span>
+            <br />
+            <span>
+              The game is in the metroidvania genre, so that required us to have
+              some areas that could only be accessed after a certain condition
+              has been met, or a certain location was reached.
+            </span>
+            <br />
+            <span></span>
+            <br />
+            <span>Solution</span>
+            <br />
+            <span>
+              There is a system in the game that allows a level designer to pair
+              an event in the game to be connected to another event without
+              writing an extra script. Here are some examples
+            </span>
+            <br />
+            <span></span>
+            <br />
+            <span>- Opening a door after an enemy has been killed</span>
+            <br />
+            <span>- Opening a latch after the lever has been pulled</span>
+          </span>
+        </div>
+        <div class="header1-container">
+          <span class="header1-text"><span>Ability unlocks</span></span>
+        </div>
+        <span class="processartificial-text09">
+          <span>
+            The game features several upgrades to give the player a feeling of
+            progression and change up the gameplay.
+          </span>
+          <br />
+          <span></span>
+          <br />
+          <span></span>
+        </span>
+        <div class="processartificial-playerabilities">
+          <div class="processartificial-container1">
+            <span class="processartificial-text13">Sword</span>
+            <img
+              alt="image"
+              src="https://media.discordapp.net/attachments/767823889723818007/999795422467993662/unknown.png"
+              class="processartificial-image05"
+            />
+            <span class="processartificial-text14">
+              <span>
+                The first item you receive in the game is just your sword. The
+                goal was to have as little of a tutorial in the game as
+                possible. The player would be taught how to play by restricting
+                his abilities until he has proven that he has understood how to
+                use his other abilities. The sword will only be granted to the
+                player after doing some basic platforming.
+              </span>
+              <br />
+              <span></span>
+              <br />
+              <span></span>
+            </span>
           </div>
-          <div class="index-nomemory1">
-            <a href="omemory-v2.html" class="index-navlink1">
-              <div class="index-no-memory2">
-                <img
-                  alt="image"
-                  src="public/playground_assets/nomemory-500h.png"
-                  class="index-image02"
-                />
-                <div class="index-container04">
-                  <span class="index-title1">No Memory</span>
-                </div>
-                <div class="index-container05">
-                  <img
-                    alt="image"
-                    src="public/playground_assets/godot1.svg"
-                    class="index-image03"
-                  />
-                </div>
-              </div>
-            </a>
-            <iframe
-              src="https://www.youtube.com/embed/6OK_81Y8vD8"
-              allowfullscreen=""
-              class="index-iframe1"
-            ></iframe>
-          </div>
-          <div class="index-dualinferno">
-            <a href="processartificial.html" class="index-navlink2">
-              <div class="index-no-memory3">
-                <img
-                  alt="image"
-                  src="public/playground_assets/processartificial-500h.png"
-                  class="index-image04"
-                />
-                <div class="index-container06">
-                  <span class="index-title2">Process Artificial</span>
-                </div>
-                <div class="index-container07">
-                  <img
-                    alt="image"
-                    src="public/playground_assets/unity.svg"
-                    class="index-image05"
-                  />
-                </div>
-              </div>
-            </a>
-            <iframe
-              src="https://www.youtube.com/embed/-6v6liLSXpQ"
-              allowfullscreen=""
-              class="index-iframe2"
-            ></iframe>
-          </div>
-          <div class="index-nomemory4">
-            <a href="smeet.html" class="index-navlink3">
-              <div class="index-no-memory5">
-                <img
-                  alt="image"
-                  src="https://dsry674gr2z0s.cloudfront.net/cdn/ff/7YFBSOjYFsmNIvQLR07KfYAksCd7YSxgbBTmp1D-6gs/1527674897/public/logo.png"
-                  class="index-image06"
-                />
-                <div class="index-container08">
-                  <span class="index-title3">sMeet</span>
-                </div>
-                <div class="index-container09">
-                  <span class="index-title4">Internship</span>
-                </div>
-              </div>
-            </a>
-            <a href="smeet.html" class="index-navlink4">
-              <img
-                alt="image"
-                src="https://media.discordapp.net/attachments/767823889723818007/1051266899205439528/Pasted_image_20221112112858.png?width=1009&amp;height=651"
-                class="index-image07"
-              />
-            </a>
-          </div>
-          <div class="index-neonworld">
-            <a href="neonworld.html">
-              <div class="index-no-memory6">
-                <img
-                  alt="image"
-                  src="public/playground_assets/neonworld-500h.png"
-                  class="index-image08"
-                />
-                <div class="index-container10">
-                  <span class="index-title5">Neon World</span>
-                </div>
-                <div class="index-container11">
-                  <img
-                    alt="image"
-                    src="public/playground_assets/godot1.svg"
-                    class="index-image09"
-                  />
-                </div>
-              </div>
-            </a>
-            <iframe
-              src="https://www.youtube.com/embed/_mGk2G58KoQ"
-              allowfullscreen=""
-              class="index-iframe3"
-            ></iframe>
-          </div>
-          <div class="index-dualinferno1">
-            <a href="dualinferno.html">
-              <div class="index-no-memory7">
-                <img
-                  alt="image"
-                  src="public/playground_assets/dualinferno-500h.png"
-                  class="index-image10"
-                />
-                <div class="index-container12">
-                  <span class="index-title6">Dual Inferno</span>
-                </div>
-                <div class="index-container13">
-                  <img
-                    alt="image"
-                    src="public/playground_assets/unity.svg"
-                    class="index-image11"
-                  />
-                  <img
-                    alt="image"
-                    src="public/playground_assets/c%23.svg"
-                    class="index-image12"
-                  />
-                </div>
-              </div>
-            </a>
-            <iframe
-              src="https://www.youtube.com/embed/CDjsfYImWU8"
-              allowfullscreen=""
-              class="index-iframe4"
-            ></iframe>
+          <div class="processartificial-container2">
+            <span class="processartificial-text18">Air dashes</span>
+            <img
+              alt="image"
+              src="https://i.gyazo.com/a6fb142e26b3b3bb89d4f05b5ed1842d.gif"
+              class="processartificial-image06"
+            />
+            <span class="processartificial-text19">
+              <span>
+                This ability allows you to dash up to the areas you could not
+                reach before. It was added as one of the ways we restrict some
+                areas from being visited before the player has unlocked this
+                ability.
+              </span>
+              <br />
+              <span></span>
+            </span>
           </div>
         </div>
         <div class="header1-container">
-          <span class="header1-text"><span>About me</span></span>
+          <span class="header1-text"><span>Map</span></span>
         </div>
-        <div class="index-grid">
+        <div class="processartificial-grid1">
+          <span class="processartificial-text22">
+            <span>
+              By pressing TAB you can open up the map showing you the whole area
+              and also the trail of where you have just explored. Pretty neat
+              when you are stuck and not sure where to go next.
+            </span>
+            <br />
+            <span></span>
+            <br />
+            <span>
+              The system was added at the very last week of development cause of
+              the realization that the game's map would be too big to remember
+              mentally.
+            </span>
+            <br />
+            <span></span>
+            <br />
+            <span></span>
+            <br />
+            <span></span>
+          </span>
           <img
             alt="image"
-            src="https://media.discordapp.net/attachments/767823889723818007/999829614652305488/LogoTransparent.png?width=841&amp;height=671"
-            class="index-image13"
+            src="https://i.gyazo.com/36eff2f37cd5544bcb29b770244e3dab.gif"
+            class="processartificial-image07"
           />
-          <span class="index-text1">
+        </div>
+        <div class="header1-container">
+          <span class="header1-text"><span>Dynamic obstacles</span></span>
+        </div>
+        <div class="processartificial-grid2">
+          <span class="processartificial-text31">
             <span>
-              A passionate self-taught tech designer with a
-              solid&nbsp;understanding of how to code game systems. I can work
-              in a team
+              To offer variety to the levels, any obstacle could be made dynamic
+              by adding some simple components. Any obstacle could be- Moved
+              back and forth- Rotated periodically- Be toggled at an
+              intervalThis solution added variety without the need to add more
+              prefabs.
             </span>
-            <span>
-              environment as well as independently. Excellent at skills such as
-              problem-solving and focus. I can quickly find solutions to given
-            </span>
-            <span>
-              goals and produce desirable results. I can quickly find methods to
-            </span>
-            <span>
-              save time and resources during development. Innovative,
-              self-driven with a positive learning mindset.
-            </span>
+            <br />
             <span></span>
+          </span>
+          <img
+            alt="image"
+            src="https://i.gyazo.com/c9bb510bf0c12068f0272cc2d163d992.gif"
+            class="processartificial-image08"
+          />
+        </div>
+        <div class="header1-container">
+          <span class="header1-text">
+            <span>Emergent enemy behaviour</span>
+          </span>
+        </div>
+        <div class="processartificial-grid3">
+          <img
+            alt="image"
+            src="https://i.gyazo.com/2af30d06d617fa61d56eee88ea82c961.gif"
+            class="processartificial-image09"
+          />
+          <span class="processartificial-text34">
+            <span>
+              Enemiy AI itself is very basic, they basically do one or 2 things
+              on a loop, but together they often lead to unexpected behaviours.
+            </span>
+            <br />
+            <span></span>
+            <br />
+            <span>
+              There is no real "team" system in the game so the player character
+              and the enemy characters all interact in the same way with each
+              other. I have planned to add a check to make sure the enemies
+              cannot damage each other, but the way the enemies would hurt each
+              other was very satisfying so it was kept that way.
+            </span>
             <br />
             <span></span>
           </span>
