@@ -515,7 +515,7 @@
 }
 .projectwannabe-text07 {
   color: var(--dl-color-primary-900);
-  width: 500px;
+  width: 1000px;
   font-size: 17px;
   align-self: center;
   margin-top: 10px;
@@ -524,8 +524,8 @@
   margin-bottom: 10px;
 }
 .projectwannabe-div04 {
-  width: 500px;
-  height: 440px;
+  width: 1000px;
+  height: 560px;
   align-self: center;
   margin-top: 10px;
   margin-left: 0px;
@@ -534,7 +534,7 @@
 }
 .projectwannabe-text11 {
   color: var(--dl-color-primary-900);
-  width: 500px;
+  width: 1000px;
   font-size: 17px;
   align-self: center;
   margin-top: 10px;
@@ -637,7 +637,7 @@
 .projectwannabe-container11 {
   flex: 0 0 auto;
   width: 495px;
-  height: 577px;
+  height: 350px;
   display: flex;
   align-items: flex-start;
   margin-right: 5px;
@@ -656,7 +656,7 @@
 }
 .projectwannabe-div07 {
   width: 495px;
-  height: 439px;
+  height: 292px;
   align-self: center;
   margin-top: 10px;
   margin-left: 0px;
@@ -666,7 +666,7 @@
 .projectwannabe-container12 {
   flex: 0 0 auto;
   width: 495px;
-  height: 577px;
+  height: 353px;
   display: flex;
   align-items: flex-start;
   margin-left: 5px;
@@ -685,7 +685,7 @@
 }
 .projectwannabe-div08 {
   width: 495px;
-  height: 476px;
+  height: 286px;
   align-self: center;
   margin-top: 10px;
   margin-right: 0px;
@@ -701,7 +701,7 @@
 .projectwannabe-container14 {
   flex: 0 0 auto;
   width: 495px;
-  height: 577px;
+  height: 464px;
   display: flex;
   align-items: flex-start;
   margin-right: 5px;
@@ -720,12 +720,13 @@
 }
 .projectwannabe-div09 {
   width: 495px;
-  height: 439px;
+  height: 293px;
   align-self: center;
   margin-top: 10px;
   margin-left: 0px;
   margin-right: 0px;
   margin-bottom: 10px;
+  padding-bottom: Infinitypx;
 }
 .projectwannabe-text15 {
   color: var(--dl-color-primary-900);
@@ -741,7 +742,7 @@
 .projectwannabe-container15 {
   flex: 0 0 auto;
   width: 495px;
-  height: 577px;
+  height: 480px;
   display: flex;
   align-items: flex-start;
   margin-left: 5px;
@@ -760,7 +761,7 @@
 }
 .projectwannabe-div10 {
   width: 495px;
-  height: 476px;
+  height: 287px;
   align-self: center;
   margin-top: 10px;
   margin-right: 0px;
@@ -779,7 +780,7 @@
 }
 .projectwannabe-fireball06 {
   color: var(--dl-color-primary-900);
-  width: 500px;
+  width: 1000px;
   font-size: 31px;
   align-self: center;
   margin-top: 10px;
@@ -789,7 +790,7 @@
 }
 .projectwannabe-text19 {
   color: var(--dl-color-primary-900);
-  width: 500px;
+  width: 1000px;
   font-size: 17px;
   align-self: center;
   margin-top: 10px;
@@ -798,7 +799,7 @@
   margin-bottom: 10px;
 }
 .projectwannabe-div11 {
-  width: 500px;
+  width: 1000px;
   height: 440px;
   align-self: center;
   margin-top: 10px;
@@ -886,7 +887,7 @@
 .projectwannabe-container17 {
   flex: 0 0 auto;
   width: 495px;
-  height: 577px;
+  height: 460px;
   display: flex;
   align-items: flex-start;
   margin-right: 5px;
@@ -915,7 +916,7 @@
 .projectwannabe-container18 {
   flex: 0 0 auto;
   width: 495px;
-  height: 577px;
+  height: 440px;
   display: flex;
   align-items: flex-start;
   margin-left: 5px;
@@ -971,7 +972,7 @@
   margin-bottom: 10px;
 }
 .projectwannabe-div14 {
-  width: 500px;
+  width: 1000px;
   height: 440px;
   align-self: center;
   margin-top: 10px;
@@ -1010,8 +1011,8 @@
   margin-bottom: 10px;
 }
 .projectwannabe-div15 {
-  width: 500px;
-  height: 440px;
+  width: 1000px;
+  height: 559px;
   align-self: center;
   margin-top: 10px;
   margin-left: 0px;
@@ -1079,7 +1080,7 @@
   margin-bottom: 10px;
 }
 .projectwannabe-image4 {
-  width: 100px;
+  width: 1000px;
   object-fit: cover;
 }
 .projectwannabe-text38 {
@@ -1103,7 +1104,7 @@
   margin-bottom: 10px;
 }
 .projectwannabe-image5 {
-  width: 100px;
+  width: 1000px;
   object-fit: cover;
 }
 .projectwannabe-text40 {
@@ -1137,7 +1138,7 @@
   margin-bottom: 10px;
 }
 .projectwannabe-image6 {
-  width: 100px;
+  width: 1000px;
   object-fit: cover;
 }
 .projectwannabe-text42 {
@@ -1151,7 +1152,7 @@
   margin-bottom: 10px;
 }
 .projectwannabe-image7 {
-  width: 100px;
+  width: 1000px;
   object-fit: cover;
 }
 .projectwannabe-text43 {
