@@ -1,0 +1,21 @@
+.container {
+  flex: 0 0 auto;
+  width: 508px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.image {
+  width: 503px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.text {
+  color: var(--dl-color-primary-900);
+  font-size: 25px;
+  align-self: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,30 @@
+.play-button {
+  flex: 0 0 auto;
+  width: 142px;
+  height: 60px;
+  display: flex;
+  position: relative;
+  margin-top: 20px;
+  transition: 0.1s;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 25px;
+  justify-content: center;
+  background-color: var(--dl-color-primary-500);
+}
+.play-button:hover {
+  background-color: var(--dl-color-primary-700);
+}
+.play-button:active {
+  background-color: var(--dl-color-primary-300);
+}
+.text {
+  color: var(--dl-color-primary-900);
+  font-size: 30px;
+  align-self: center;
+  margin-top: 20px;
+  text-align: center;
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
